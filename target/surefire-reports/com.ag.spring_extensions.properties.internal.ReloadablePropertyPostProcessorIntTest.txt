@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ag.spring_extensions.properties.internal.ReloadablePropertyPostProcessorIntTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.386 sec
