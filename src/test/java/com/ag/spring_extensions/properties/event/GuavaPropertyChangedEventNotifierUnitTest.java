@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
 import com.google.common.eventbus.EventBus;
 import com.ag.spring_extensions.properties.bean.PropertyModifiedEvent;
 import com.ag.spring_extensions.properties.internal.ReloadablePropertyPostProcessor;
+import org.springframework.test.util.ReflectionTestUtils;
 
 @RunWith(JMock.class)
 @SuppressWarnings("unqualified-field-access")
@@ -30,7 +31,8 @@ public class GuavaPropertyChangedEventNotifierUnitTest {
 	@Before
 	public void setUp() throws Exception {
 		this.eventBus = this.context.mock(EventBus.class);
-		this.eventNotifier = new GuavaPropertyChangedEventNotifier(this.eventBus);
+		this.eventNotifier = new GuavaPropertyChangedEventNotifier();
+        ReflectionTestUtils.setField(this.eventNotifier, "eventBus", this.eventBus);
 	}
 
 	@Test

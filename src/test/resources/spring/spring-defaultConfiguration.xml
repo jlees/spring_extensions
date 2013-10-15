@@ -4,17 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<!-- Define event bus for use with GuavaPropertyChangedEventNotifier -->
-	<bean class="com.google.common.eventbus.EventBus" id="propertiesEventBus" />
-
 	<bean
 		class="com.ag.spring_extensions.properties.conversion.DefaultPropertyConversionService"
 		id="conversionService" />
 
 	<bean
-		class="com.ag.spring_extensions.properties.event.GuavaPropertyChangedEventNotifier"
-		autowire="constructor" id="eventNotifier">
-		<constructor-arg ref="propertiesEventBus" />
+		class="com.ag.spring_extensions.properties.event.GuavaPropertyChangedEventNotifier" id="eventNotifier">
 	</bean>
 
 	<bean

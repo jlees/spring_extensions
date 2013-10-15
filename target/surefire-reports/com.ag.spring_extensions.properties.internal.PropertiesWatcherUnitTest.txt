@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.ag.spring_extensions.properties.internal.PropertiesWatcherUnitTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60.061 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60.057 sec

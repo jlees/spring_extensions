@@ -13,15 +13,15 @@ import com.ag.spring_extensions.properties.internal.ReloadablePropertyPostProces
  * of Guava's EventBus to post PropertyModifiedEvent instances
  */
 
-@Component
+@Component("reloadablePropertyEventNotifier")
 public class GuavaPropertyChangedEventNotifier implements PropertyChangedEventNotifier {
 
 	private final EventBus eventBus;
 
-	@Autowired
-	public GuavaPropertyChangedEventNotifier(@Qualifier("propertiesEventBus") final EventBus eventBus)
+	public GuavaPropertyChangedEventNotifier()
     {
-		this.eventBus = eventBus;
+        super();
+        this.eventBus = new EventBus();
 	}
 
 	@Override

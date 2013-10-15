@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  * </pre>
  *
  */
-@Component
+@Component("reloadablePropertyPropertyResolver")
 public class SubstitutingPropertyResolver implements PropertyResolver {
 
 	protected static Logger log = LoggerFactory.getLogger(SubstitutingPropertyResolver.class);
